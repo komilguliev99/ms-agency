@@ -1,0 +1,42 @@
+.navbar {
+	padding: 0;
+	padding-left: 50px;
+
+	& .navbar-brand {
+		margin-right: 120px;
+	}
+
+	& .container {
+		padding: 0;
+	}
+
+	& .nav-item {
+		box-sizing: border-box;
+		padding: 50px 20px;
+
+		&.active {
+			border-top: 3px solid #fff;
+			padding-top: 47px;
+		}
+
+		&.active .nav-link {
+			color: #fff;
+		}
+
+		& .nav-link {
+			color: #fff;
+			font-size: 16px;
+		}
+
+		&.social {
+			margin-left: 240px;
+			padding: 55px 0;
+			font-size: 16px;
+		}
+
+		& .social__item {
+			font-size: 11px;
+			padding-right: 10px;
+		}
+	}
+}

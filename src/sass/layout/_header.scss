@@ -1,0 +1,72 @@
+@import		'../abstracts/variables';
+
+.header {
+	height: 900px;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	color: #fff;
+
+	& > div {
+		height: 100%;
+	}
+
+	&__left {
+		background-color: $bg-color-main;
+	}
+
+	&__right {
+		background-color: #fff;
+		color: #000;
+		padding-top: 53px;
+	}
+
+	&__lang {
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin-left: 32px;
+
+		& span:first-child {
+			margin-right: 2px;
+		}
+
+		& span:last-child {
+			margin-left: 2px;
+		}
+
+		& span:hover {
+			cursor: pointer;
+		}
+
+		& .active {
+			color: $bg-color-main;
+		}
+	}
+
+	&__menu {
+		box-sizing: border-box;
+		text-align: right;
+		margin-left: auto;
+		padding-right: 60px;
+		font-size: 16px;
+		transition: all .3s ease-out;
+
+		& > i {
+			font-size: 16px;
+			margin-left: 40px;
+
+			&:hover {
+				cursor: pointer;
+				opacity: 0.8;
+				font-size: 17px;
+			}
+		}
+	}
+
+	&__logo {
+		font-size: 30px;
+		font-weight: bolder;
+		color: #fff;
+	}
+}
