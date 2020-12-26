@@ -6,11 +6,23 @@
 @import		'./pages/process';
 @import		'./pages/service';
 @import		'./components/accordion';
+@import		'./components//testimonial';
 
 .clients {
 	width: 100%;
 
 	& img {
 		height: 60px;
+	}
+}
+
+#about {
+	padding: 100px 0 200px 0;
+
+	& h1 {
+		font-size: 40px;
+		font-weight: bold;
+		letter-spacing: 1px;
+		margin-bottom: 60px;
 	}
 }
