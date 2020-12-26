@@ -53,4 +53,13 @@
 		background-color: #fff;
 		color:  $bg-color-main;
 	}
+
+	&--primary {
+		background-color: $bg-color-main;
+		color: #fff;
+
+		&:hover {
+			color: #fff;
+		}
+	}
 }
