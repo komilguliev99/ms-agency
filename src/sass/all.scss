@@ -1,23 +1,11 @@
+@import		'./base/base';
 @import		'./layout/navigation';
 @import		'./layout/header';
 @import		'./components/button';
 @import		'./components/slider-text';
-
-* {
-	padding: 0;
-	margin: 0; }
-  
-html {
-	font-size: 10px;
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-}
-
-body {
-	box-sizing: border-box;
-	width: 100%;
-}
+@import		'./pages/process';
+@import		'./pages/service';
+@import		'./components/accordion';
 
 .clients {
 	width: 100%;
@@ -25,70 +13,4 @@ body {
 	& img {
 		height: 60px;
 	}
-}
-
-.mobile-app,
-.web-dev {
-	box-sizing: border-box;
-	overflow: hidden;
-	display: flex;
-	align-items: center;
-	position: relative;
-	width: 100%;
-	height: 800px;
-	font-size: 16px;
-
-	& .row img {
-		height: 600px;
-		position: relative;
-		z-index: 100;
-	}
-
-	& h3 {
-		font-size: 30px;
-		font-weight: bold;
-		letter-spacing: 1px;
-		text-transform: capitalize;
-		margin-bottom: 40px;
-	}
-
-	& p {
-		width: 90%;
-	}
-}
-
-.mobile-app > img {
-	height: 600px;
-	position: absolute;
-	top: 140px;
-	left: -20px;
-}
-
-.mobile-app .row img {
-	margin-left: 160px;
-}
-
-.web-dev > img {
-	height: 600px;
-	position: absolute;
-	top: 140px;
-	right: -20px;
-}
-
-.web-dev p {
-	width: 75%;
-}
-
-.web-dev .row img {
-	margin-right: 200px;
-	width: 1000px;
-}
-
-.product-design .row img {
-	height:470px;
-	margin-left: 90px;
-}
-
-.product-design > img {
-	left: 0px;
 }

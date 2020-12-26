@@ -21,8 +21,21 @@
 	padding-left: 90px;
 }
 
+.padding-y-5 {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
 .bx-shadow {
 	box-shadow: 0 5px 5px 5px #eee;
+}
+
+.round-top-left {
+	border-top-left-radius: 60px;
+}
+
+.round-bottom-right {
+	border-bottom-right-radius: 60px;
 }
 
 .container-custom {
