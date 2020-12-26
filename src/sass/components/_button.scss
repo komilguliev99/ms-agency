@@ -62,4 +62,16 @@
 			color: #fff;
 		}
 	}
+
+	&--small {
+		padding: 10px 25px !important;
+	}
+
+	@media (max-width: $md-size) {
+		&,
+		&:link,
+		&:visited {
+			padding: 5px 20px;
+		}
+	}
 }

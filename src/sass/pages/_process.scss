@@ -63,3 +63,24 @@
 .product-design > img {
 	left: 0px;
 }
+
+@media (max-width: $md-size) {
+	.mobile-app .row .col-md-6:first-child {
+		display: none;
+	}
+
+	.mobile-app .row > img {
+		display: none;
+	}
+
+	.mobile-app .row .col-md-6 {
+		padding: 0;
+
+		p {
+			width: 100%;
+			padding-right: 10px;
+			padding-left: 10px;
+			font-size: 10px;
+		}
+	}
+}

@@ -83,4 +83,10 @@
 		font-weight: bolder;
 		color: #fff;
 	}
+
+	@media (max-width: $md-size) {
+		&__right {
+			display: none;
+		}
+	}
 }

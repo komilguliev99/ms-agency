@@ -8,13 +8,13 @@ export default class Testimonial {
 			prevBtn: '.testimonial__arrow-prev',
 			controll: '.testimonial__controll',
 			activeClass: 'active',
-			disabledClass: 'disabled',
 			active: 0
 		};
 
 		this.init();
 	}
 
+	// Инициализация начального состояния
 	init ()
 	{
 		this.items = document.querySelectorAll(this.config.itemClass);
@@ -32,6 +32,7 @@ export default class Testimonial {
 		this.setControllListener();
 	}
 
+	// Установка обработчиков событий на контрольных блоков
 	setControllListener ()
 	{
 		let		it = 0;
@@ -51,6 +52,7 @@ export default class Testimonial {
 		}
 	}
 
+	// Установка обработчиков событий на стрелках для контроля
 	setArrowListeners ()
 	{
 		document.querySelector(this.config.nextBtn).addEventListener('click', () => {
@@ -69,6 +71,7 @@ export default class Testimonial {
 		});
 	}
 
+	// Установка активного элемента
 	setActive (index)
 	{
 		let		curr = this.config.active;
@@ -80,6 +83,7 @@ export default class Testimonial {
 		this.config.active = index;
 	}
 
+	// Делаем все элементы неактивными
 	clear ()
 	{
 		let	it = 0;

@@ -2,6 +2,22 @@
 	padding: 0;
 	padding-left: 50px;
 
+	&__nav-footer {
+		text-align: right;
+		font-size: 14px;
+		color: #000;
+		padding-top: 10px;
+
+		& .nav-item {
+			display: inline-block;
+			margin-right: 30px;
+		}
+
+		& .nav-link {
+			color: #000;;
+		}
+	}
+
 	& .navbar-brand {
 		margin-right: 120px;
 	}
@@ -37,6 +53,11 @@
 		& .social__item {
 			font-size: 11px;
 			padding-right: 10px;
+
+			&:hover {
+				cursor: pointer;
+				opacity: 0.5;
+			}
 		}
 	}
 }

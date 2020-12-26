@@ -7,6 +7,7 @@
 @import		'./pages/service';
 @import		'./components/accordion';
 @import		'./components//testimonial';
+@import		'./components/card';
 
 .clients {
 	width: 100%;
@@ -24,5 +25,78 @@
 		font-weight: bold;
 		letter-spacing: 1px;
 		margin-bottom: 60px;
+	}
+}
+
+#counter {
+	height: 220px;
+	width: 100%;
+	background-image: url('../img/bg-counter.jpg');
+	color: #fff;
+	font-size: 14px;
+
+	& .row {
+		height: 100%;
+	}
+
+	& h2 {
+		font-size: 40px;
+	}
+}
+
+#blog {
+	padding: 60px 50px;
+	font-size: 14px;
+	color: #777;
+	line-break: strict;
+	word-wrap: keep-all;
+	hyphens: none;
+
+	& .row {
+		box-sizing: border-box;
+		margin: 0 !important;
+	}
+
+
+	& h1 {
+		font-size: 30px;
+		margin-bottom: 30px;
+		color: #000;
+	}
+
+}
+
+
+#main-footer {
+	background-color: $bg-light;
+	padding: 45px 0;
+	font-size: 14px;
+
+	& .lead {
+		font-size: 36px;
+		font-weight: bold;
+		color: $bg-color-main;
+		padding-left: 50px;
+	}
+
+	& > p {
+		width: 50%;
+		padding-left: 50px;
+	}
+
+	& .social {
+		text-align: right;
+		width: 49%;
+		padding-right: 60px;
+	}
+
+	& .social__item {
+		display: inline-block;	
+		margin-right: 30px;
+
+		&:hover {
+			cursor: pointer;
+			opacity: 0.5;
+		}
 	}
 }
