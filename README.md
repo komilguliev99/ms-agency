@@ -1,3 +1,7 @@
+### Установка необходимых пакетов
+```bash
+npm install
+```
 ### Сборка
 ```bash
 npm run watch:sass
