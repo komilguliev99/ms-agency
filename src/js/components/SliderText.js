@@ -20,32 +20,41 @@ export default class SliderTest
 		this.init();
 	}
 
+	// Инициализация начального состояния
 	init ()
 	{
 		this.itemsText = document.querySelectorAll(this.config.textClass);
 		this.itemsVideo = document.querySelectorAll(this.config.videoClass);
 		this.selectors = document.querySelectorAll(this.config.selectors + " > span");
 		this.itemsCount = this.itemsText.length;
-		console.log(this.itemsText);
-		console.log(this.itemsVideo);
 		
 		this.setActive();
 
-		console.log(document.querySelector(this.config.nextBtn));
+		this.setNextPrevListeners();
+		this.setControls();
+		this.setVideoListeners();	
+	}
+
+	// Установка обработчиков событий на контрольных стрелочек
+	setNextPrevListeners ()
+	{
 		document.querySelector(this.config.nextBtn).addEventListener('click', () => {
 			this.next();
 		});
 		document.querySelector(this.config.prevBtn).addEventListener('click', () => {
 			this.prev();
 		})
+	}
 
+	// Установка обработчиков событий на контрольных элементов в левой части текста слайдер
+	setControls ()
+	{
 		document.querySelector(this.config.selectors).addEventListener('click', event => {
 			let	i = 0;
 			for (let el of this.selectors)
 			{
 				if (el == event.target)
 				{
-					console.log("HHHHHHHHHHHHHHHHHHHHHHHH")
 					this.clearActives();
 					this.config.active = i;
 					this.setActive();
@@ -53,7 +62,11 @@ export default class SliderTest
 				i++;
 			}
 		});
+	}
 
+	// Установка обработчиков событии на видео
+	setVideoListeners ()
+	{
 		document.querySelector(this.config.playBtn).addEventListener('click', event => {
 			this.itemsVideo[this.config.active].querySelector('video').play();
 			event.target.classList.add('d-none');
@@ -71,7 +84,8 @@ export default class SliderTest
 		}
 	}
 
-	setActive (active_index)
+	// Установка активный элемент по индексу (this.config.active)
+	setActive ()
 	{
 		this.itemsText[this.config.active].style.top = "50px";
 		this.clearActives();
@@ -81,6 +95,7 @@ export default class SliderTest
 		this.selectors[this.config.active].classList.add(this.config.activeClass);
 	}
 
+	// Сделаем все элементы слайдера неактивными
 	clearActives ()
 	{
 		window.console.log(this.itemsText, "LEMEN");

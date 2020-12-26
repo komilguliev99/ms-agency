@@ -12,6 +12,7 @@ export default class Navbar
 		this.init();
 	}
 
+	// Инициализация начального состояния
 	init ()
 	{
 		this.itemNodes = document.querySelectorAll(this.config.container + ' > ' + this.config.navbarClass);
@@ -34,6 +35,7 @@ export default class Navbar
 
 	}
 
+	// Сделаем все элементы навигации неактивными
 	clearActive ()
 	{
 		for (let item of this.itemNodes)
