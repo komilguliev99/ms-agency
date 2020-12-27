@@ -21,5 +21,10 @@
 		& .col-md-6:nth-child(2) {
 			display: none;
 		}
+
+		& h3 {
+			font-size: 24px;
+			padding-right: 0;
+		}
 	}
 }

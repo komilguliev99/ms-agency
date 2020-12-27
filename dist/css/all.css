@@ -495,7 +495,10 @@ body {
     color: #fff; }
   @media only screen and (max-width: 768px) {
     #service .col-md-6:nth-child(2) {
-      display: none; } }
+      display: none; }
+    #service h3 {
+      font-size: 24px;
+      padding-right: 0; } }
 
 /**COLORS**/
 /**SIZES**/
@@ -578,8 +581,13 @@ body {
     top: 18px;
     left: 0; }
   @media only screen and (max-width: 768px) {
-    .accordion__item.active {
-      margin-bottom: 50px; } }
+    .accordion {
+      width: 95%;
+      font-size: 9px; }
+      .accordion__item.active {
+        margin-bottom: 50px; }
+      .accordion__item > h4 {
+        font-size: 14px; } }
 
 /**COLORS**/
 /**SIZES**/
