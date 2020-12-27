@@ -176,7 +176,7 @@
 		color: $bg-color-main !important;
 	}
 
-	@media (max-width: $md-size) {
+	@include respond($md-size) {
 		&__item {
 			display: none;
 		}
@@ -194,8 +194,7 @@
 			& > video {
 				min-width: 350px;
 				min-height: 400px;
-				border-top-left-radius: 60px;
-				border-bottom-right-radius: 60px;
+				border-radius: 0;
 			}
 		}
 

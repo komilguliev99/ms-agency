@@ -1,5 +1,8 @@
+@import		'../abstracts/variables';
+@import		'../abstracts/mixins';
+
 .testimonial {
-	width: 850px;
+	width: 75%;
 	height: 400px;
 	margin: 0 auto;
 	position: relative;
@@ -84,7 +87,7 @@
 	}
 
 	&__arrow-next {
-		left: 808px;
+		right: 0;
 	}
 
 	& .center {
@@ -134,5 +137,28 @@
 		border-bottom-right-radius: 30px;
 		margin-right: 25px;
 		box-shadow: 0 1rem 0.5rem 0.5rem #eee;
+	}
+
+	@include respond($md-size) {
+		& {
+			width: 95%;
+		}
+
+		&__words {
+			font-size: 20px;
+		}
+
+		&__person {
+			border-radius: 0;
+
+			& .text-title {
+				font-size: 18px;
+			}
+
+			& p {
+				font-size: 12px;
+				padding-right: 10px;
+			}
+		}
 	}
 }

@@ -1,3 +1,5 @@
+@import 	"./variables";
+
 @mixin center {
 	position: absolute;
 	top: 50%;
@@ -11,4 +13,19 @@
 	position: relative;
 	width: 100%;
 	height: 800px;
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == $sm-size {
+        @media only screen and (max-width: $sm-size) { @content };   
+    }
+    @if $breakpoint == $md-size {
+        @media only screen and (max-width: $md-size) { @content };     
+    }
+    @if $breakpoint == $lg-size {
+        @media only screen and (max-width: $lg-size) { @content };   
+    }
+    @if $breakpoint == $xl-size {
+        @media only screen and (min-width: $xl-size) { @content };    
+    }
 }

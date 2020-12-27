@@ -1,4 +1,5 @@
 @import		'../abstracts/variables';
+@import		'../abstracts/mixins';
 
 .row {
 	width: 100%;
@@ -58,6 +59,10 @@
 		}
 	}
 
+	&__checkbox {
+		display: none;
+	}
+
 	&__menu {
 		box-sizing: border-box;
 		text-align: right;
@@ -66,14 +71,19 @@
 		font-size: 16px;
 		transition: all .3s ease-out;
 
-		& > i {
+		& > label {
+			margin-left: 40px;
+		}
+
+		& > label {
 			font-size: 16px;
 			margin-left: 40px;
+			transition: all .3s ease;
 
 			&:hover {
 				cursor: pointer;
 				opacity: 0.8;
-				font-size: 17px;
+				transform: translateY(-2px);
 			}
 		}
 	}
@@ -84,9 +94,18 @@
 		color: #fff;
 	}
 
-	@media (max-width: $md-size) {
+	@include respond($md-size) {
 		&__right {
-			display: none;
+			display: none !important;
+		}
+
+		& .row {
+			margin: 0;
+		}
+
+		&__left {
+			width: 100%;
+			padding-right: 0;
 		}
 	}
 }

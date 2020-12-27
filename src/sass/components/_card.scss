@@ -77,4 +77,8 @@
 		padding: 20px 30px;
 		font-size: 14px;
 	}
+
+	@include respond($md-size) {
+		margin-bottom: 20px;
+	}
 }

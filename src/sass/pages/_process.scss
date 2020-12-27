@@ -1,3 +1,6 @@
+@import		'../abstracts/variables';
+@import		'../abstracts/mixins';
+
 .mobile-app,
 .web-dev {
 	box-sizing: border-box;
@@ -64,7 +67,7 @@
 	left: 0px;
 }
 
-@media (max-width: $md-size) {
+@include respond($md-size) {
 	.mobile-app .row .col-md-6:first-child {
 		display: none;
 	}
@@ -78,9 +81,38 @@
 
 		p {
 			width: 100%;
-			padding-right: 10px;
-			padding-left: 10px;
-			font-size: 10px;
+			font-size: 16px;
+		}
+	}
+
+	.web-dev .row img {
+		display: none;
+		margin-right: auto;
+		margin-left: auto;
+		width: 1000px;
+	}
+
+	.web-dev .col-md-6:first-child {
+		padding-left: 0;
+	}
+
+	.web-dev p {
+		width: 100%;
+	}
+
+	.web-dev,
+	.mobile-app,
+	.product-design {
+		height: 700px;
+		padding: 20px;
+
+		& p {
+			font-size: 20px !important;
+			padding: 0;
+		}
+
+		& > img {
+			display: none;
 		}
 	}
 }

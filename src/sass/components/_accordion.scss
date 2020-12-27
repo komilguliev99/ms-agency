@@ -1,4 +1,5 @@
 @import		'../abstracts/variables';
+@import		'../abstracts/mixins';
 
 .accordion {
 	height: 500px;
@@ -101,5 +102,11 @@
 		color: $bg-color-main;
 		top: 18px;
 		left: 0;
+	}
+
+	@include respond($md-size) {
+		&__item.active {
+			margin-bottom: 50px;
+		}
 	}
 }
